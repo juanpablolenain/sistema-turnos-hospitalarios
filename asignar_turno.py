@@ -1,27 +1,3 @@
-especialidades = {
-    "Clinica medica": {
-        "cupo_maximo": 5,
-        "turnos_asignados": 0
-    },
-    "Pediatria": {
-        "cupo_maximo": 4,
-        "turnos_asignados": 0
-    },
-    "Traumatologia": {
-        "cupo_maximo": 3,
-        "turnos_asignados": 0
-    },
-    "Cardiologia": {
-        "cupo_maximo": 1,
-        "turnos_asignados": 0
-    },
-    "Guardia": {
-        "cupo_maximo": 10,
-        "turnos_asignados": 0
-    }
-}
-
-
 def mostrar_especialidades():
     print("1. Clínica médica")
     print("2. Pediatría")
@@ -46,9 +22,33 @@ def obtener_especialidad(opcion):
             return None
 
 
-def hay_disponibilidad(especialidad):
+def hay_disponibilidad(especialidad, especialidades):  #devuelve booleano
     return especialidades[especialidad]["turnos_asignados"] < especialidades[especialidad]["cupo_maximo"]
 
+def mostrar_prioridades():
+    print("1. Alta")
+    print("2. Media")
+    print("3. Baja")
 
-def ocupar_turno(especialidad):
+def asignar_prioridad(opcion):
+    match opcion:
+        case "1":
+            return "Alta"
+        case "2":
+            return "Media"
+        case "3":
+            return "Baja"
+        case _:
+            return None
+
+
+def ocupar_turno(especialidad, dni, prioridad, especialidades, turnos):
     especialidades[especialidad]["turnos_asignados"] += 1
+    turno = {
+    "id_turno":     len(turnos) + 1,
+    "dni":          dni,
+    "especialidad": especialidad,
+    "prioridad":    prioridad,
+    "atendido":     False
+}
+    turnos.append(turno)

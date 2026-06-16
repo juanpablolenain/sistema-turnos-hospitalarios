@@ -27,4 +27,3 @@ def registrar_paciente(pacientes):
         "obra_social": obra_social
     }
     print("Paciente registrado correctamente.")
-    print(pacientes)
