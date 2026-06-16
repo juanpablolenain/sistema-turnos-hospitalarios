@@ -1,0 +1,7 @@
+.venv/
+.venv-py39-backup/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.vscode/
