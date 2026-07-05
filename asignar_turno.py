@@ -22,13 +22,15 @@ def obtener_especialidad(opcion):
             return None
 
 
-def hay_disponibilidad(especialidad, especialidades):  #devuelve booleano
+def hay_disponibilidad(especialidad, especialidades):
     return especialidades[especialidad]["turnos_asignados"] < especialidades[especialidad]["cupo_maximo"]
+
 
 def mostrar_prioridades():
     print("1. Alta")
     print("2. Media")
     print("3. Baja")
+
 
 def asignar_prioridad(opcion):
     match opcion:
@@ -45,10 +47,10 @@ def asignar_prioridad(opcion):
 def ocupar_turno(especialidad, dni, prioridad, especialidades, turnos):
     especialidades[especialidad]["turnos_asignados"] += 1
     turno = {
-    "id_turno":     len(turnos) + 1,
-    "dni":          dni,
-    "especialidad": especialidad,
-    "prioridad":    prioridad,
-    "atendido":     False
-}
+        "id_turno":     len(turnos) + 1,
+        "dni":          dni,
+        "especialidad": especialidad,
+        "prioridad":    prioridad,
+        "estado":       "pendiente"
+    }
     turnos.append(turno)
