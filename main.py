@@ -20,7 +20,7 @@ especialidades = {
         "turnos_asignados": 0
     },
     "Cardiologia": {
-        "cupo_maximo": 1,
+        "cupo_maximo": 3,
         "turnos_asignados": 0
     },
     "Guardia": {
