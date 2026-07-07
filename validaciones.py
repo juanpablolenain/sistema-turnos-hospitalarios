@@ -1,7 +1,9 @@
-# validaciones.py
-# Martín Gabriel Rivas
+# Funciones para validar los datos ingresados por el usuario antes de registrarlos.
+# Cada función recibe un string y devuelve True si es válido, False si no lo es.
+# En caso de error, imprime un mensaje descriptivo para que el usuario sepa qué corregir.
 
 def validar_dni(dni):
+    # El DNI no puede estar vacío, debe contener solo números y tener 7 u 8 dígitos
     if dni == "":
         print("Error: el DNI no puede estar vacío.")
         return False
@@ -15,6 +17,7 @@ def validar_dni(dni):
 
 
 def validar_nombre(nombre):
+    # El nombre no puede estar vacío, debe tener al menos 2 caracteres y solo letras y espacios
     if nombre == "":
         print("Error: el nombre no puede estar vacío.")
         return False
@@ -29,6 +32,7 @@ def validar_nombre(nombre):
 
 
 def validar_edad(edad):
+    # La edad debe ser un número entero entre 0 y 120
     if edad == "":
         print("Error: la edad no puede estar vacía.")
         return False
@@ -43,6 +47,7 @@ def validar_edad(edad):
 
 
 def validar_obra_social(obra_social):
+    # Solo se aceptan las obras sociales con las que trabaja el centro
     obras_social_aceptadas = ["OSDE", "ISSUNNE", "INSSEP", "PARTICULAR"]
     obra_social = obra_social.upper()
     if obra_social in obras_social_aceptadas:
@@ -51,3 +56,4 @@ def validar_obra_social(obra_social):
         print("Error: El estudio no trabaja con la obra social: ", obra_social)
         print("Opciones válidas: ", obras_social_aceptadas)
         return False
+
