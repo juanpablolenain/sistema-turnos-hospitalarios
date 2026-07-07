@@ -1,3 +1,6 @@
+# validaciones.py
+# Martín Gabriel Rivas
+
 def validar_dni(dni):
     if dni == "":
         print("Error: el DNI no puede estar vacío.")
@@ -29,21 +32,18 @@ def validar_edad(edad):
     if edad == "":
         print("Error: la edad no puede estar vacía.")
         return False
-
     if not edad.isdigit():
         print("Error: la edad debe ser un número.")
         return False
-
     edad = int(edad)
-
     if edad < 0 or edad > 120:
         print("Error: la edad debe estar entre 0 y 120 años.")
         return False
-
     return True
 
+
 def validar_obra_social(obra_social):
-    obras_social_aceptadas = ["OSDE", "ISSUNNE", "INSSEP","PARTICULAR"]
+    obras_social_aceptadas = ["OSDE", "ISSUNNE", "INSSEP", "PARTICULAR"]
     obra_social = obra_social.upper()
     if obra_social in obras_social_aceptadas:
         return True
