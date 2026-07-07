@@ -1,5 +1,30 @@
 ORDEN_PRIORIDAD = {"Alta": 0, "Media": 1, "Baja": 2}
 
+def atender_turno(turnos, pacientes, especialidades):
+    from asignar_turno import mostrar_especialidades, obtener_especialidad
+    while True:
+        print("\n--- Atender siguiente turno ---")
+        mostrar_especialidades()
+        opcion = input("Seleccione especialidad: ")
+        especialidad = obtener_especialidad(opcion)
+        if especialidad is None:
+            print("Opción inválida. Intente de nuevo.")
+            continue
+        break
+
+    turno = obtener_siguiente_turno(especialidad, turnos)
+
+    if turno is None:
+        print(f"No hay turnos pendientes en {especialidad}.")
+        return
+
+    mostrar_siguiente_turno(turno, pacientes)
+    nuevo_estado = seleccionar_nuevo_estado()
+    turno["estado"] = nuevo_estado
+    especialidades[especialidad]["turnos_asignados"] -= 1
+    print(f"Turno #{turno['id_turno']} marcado como {nuevo_estado}.")
+
+#------------------------------------------------------------------------------------
 
 def obtener_siguiente_turno(especialidad, turnos):
     pendientes = [
