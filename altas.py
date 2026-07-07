@@ -2,6 +2,7 @@ from validaciones import validar_dni, validar_nombre, validar_edad, validar_obra
 
 
 def registrar_paciente(pacientes):
+    # Solicita y valida los datos del paciente antes de agregarlo al diccionario
     print("\n--- Registro de paciente ---")
     while True:
         dni = input("Ingrese DNI: ").strip()
