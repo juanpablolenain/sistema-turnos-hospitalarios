@@ -1,4 +1,4 @@
-from validaciones import validar_dni, validar_nombre, validar_edad, validar_obra_social, mostrar_obras_sociales
+from validaciones import validar_dni, validar_nombre, validar_edad, validar_obra_social
 
 
 def registrar_paciente(pacientes):
@@ -20,7 +20,6 @@ def registrar_paciente(pacientes):
         if validar_edad(edad):
             break
     while True:
-        mostrar_obras_sociales()
         obra_social = input("Ingrese obra social o escriba Particular: ").strip().upper()
         if validar_obra_social(obra_social):
             break
