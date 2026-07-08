@@ -1,5 +1,20 @@
 # Sistema de Turnos Hospitalarios
 
+## Integrantes
+  - Lenain, Juan Pablo
+  - Rivas, Martin Gabriel
+  - Lezcano Genes, Joshua David
+  - Manassero, Alejandro
+  - Ojeda, Ignacio
+
+## Descripción general del sistema
+
+Este proyecto es un sistema de turnos hospitalarios desarrollado en Python y ejecutado por consola. Su objetivo es administrar la atención de pacientes en un centro de salud, permitiendo registrar pacientes, solicitar turnos, asignarlos según especialidad médica, consultar turnos pendientes, atender pacientes según prioridad y visualizar estadísticas básicas.
+
+El sistema valida los datos ingresados por el usuario y controla la disponibilidad de turnos para cada especialidad. Además, se encuentra organizado en diferentes módulos para separar las funcionalidades principales y facilitar la lectura, mantenimiento y comprensión del código.
+
+A través de este proyecto se aplican contenidos trabajados durante la materia, como estructuras condicionales, ciclos, funciones, validaciones, acumuladores, contadores, modularización y manejo básico de errores.
+
 ## Instrucciones de ejecución
 
 Para ejecutar el sistema, es necesario tener instalado Python en la computadora.
