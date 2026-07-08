@@ -1,4 +1,4 @@
 # Sistema de Turnos Hospitalarios
 
-# Integreantes:
+## Integreantes:
     -Lenain Juan Pablo
