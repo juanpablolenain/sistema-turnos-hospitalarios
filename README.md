@@ -7,6 +7,9 @@
   - Manassero, Alejandro
   - Ojeda, Ignacio
 
+## Comisión
+  Comisión 2
+
 ## Descripción general del sistema
 
 Este proyecto es un sistema de turnos hospitalarios desarrollado en Python y ejecutado por consola. Su objetivo es administrar la atención de pacientes en un centro de salud, permitiendo registrar pacientes, solicitar turnos, asignarlos según especialidad médica, consultar turnos pendientes, atender pacientes según prioridad y visualizar estadísticas básicas.
@@ -102,4 +105,12 @@ Por este motivo, no es necesario ejecutar `pip install` ni instalar paquetes adi
 El sistema debe ejecutarse desde la carpeta donde se encuentra el archivo `main.py`, ya que desde allí se importan los demás módulos del proyecto.
 
 Los datos cargados durante la ejecución, como pacientes y turnos, se mantienen en memoria mientras el programa está abierto. Al cerrar el sistema, la información se pierde, ya que esta versión no utiliza una base de datos ni archivos de persistencia.
+
+## Uso de AI
+
+Durante el desarrollo del proyecto se utilizó ChatGPT como herramienta de apoyo para orientar la organización del código, resolver dudas puntuales de programación, revisar errores y mejorar la modularización del sistema.
+
+Las respuestas generadas por la IA no fueron incorporadas de manera automática, sino que fueron analizadas, adaptadas y probadas por el grupo antes de integrarlas al proyecto. En cada caso, se verificó que las soluciones propuestas fueran coherentes con la consigna, compatibles con el funcionamiento general del sistema y comprensibles para poder explicarlas y defenderlas técnicamente.
+
+De esta manera, la IA fue utilizada como una herramienta de asistencia y aprendizaje, pero las decisiones finales sobre el código, la estructura del programa y su funcionamiento fueron tomadas por el grupo.
 
